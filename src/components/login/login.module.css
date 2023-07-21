@@ -1,0 +1,204 @@
+.container {
+	margin: 70px auto 0 auto;
+	max-width: 900px;
+	height: 350px;
+	border: 2px solid #d9d9d9;
+	border-radius: 10px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: fit-content;
+	height: fit-content;
+	margin: 30px auto 0 auto;
+	justify-content: space-around;
+}
+
+.login,
+.password,
+.enter {
+	width: 300px;
+	outline: none;
+	margin: 0 auto;
+	border-radius: 10px;
+	border: 1px solid #d9d9d9;
+}
+
+.login,
+.password {
+	margin-top: 16px;
+	outline: none;
+	border: 1px solid #d9d9d9;
+	border-radius: 10px;
+	padding: 15px 15px;
+	color: rgba(0, 0, 0);
+	font-family: 'Inter', sans-serif;
+	font-size: 22px;
+	font-weight: 500;
+	max-width: 200px;
+	transition: border 0.3s ease;
+}
+
+.password,
+.enter {
+	margin-top: 20px;
+}
+
+.enter {
+	color: #000;
+	font-family: 'Inter', sans-serif;
+	font-size: 23px;
+	font-weight: 500;
+	padding: 14px;
+	background: none;
+	border: 1px solid #d9d9d9;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.enter:hover {
+	border: 1px solid #000;
+}
+
+.login::placeholder,
+.password::placeholder {
+	color: rgba(0, 0, 0, 0.5);
+	font-family: 'Inter', sans-serif;
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.war {
+	color: #a11515;
+}
+
+.login:focus,
+.password:focus {
+	border: 1px solid #000;
+}
+
+.logLogin {
+	color: #000;
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+@media (max-width: 460px) {
+	.container {
+		margin: 30px auto 0 auto;
+		max-width: 900px;
+		height: 350px;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+	}
+
+	.enter {
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 23px;
+		font-weight: 500;
+		padding: 10px;
+		background: none;
+		border: 1px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		cursor: pointer;
+	}
+
+	.login,
+	.password {
+		margin-top: 16px;
+		outline: none;
+		border: 1px solid #d9d9d9;
+		border-radius: 10px;
+		padding: 15px 15px;
+		color: rgba(0, 0, 0);
+		font-family: 'Inter', sans-serif;
+		font-size: 20px;
+		font-weight: 500;
+		max-width: 200px;
+		transition: border 0.3s ease;
+	}
+
+	.login,
+	.password,
+	.enter {
+		width: 250px;
+		outline: none;
+		margin: 0 auto;
+		border-radius: 10px;
+		border: 1px solid #d9d9d9;
+	}
+
+	.login::placeholder,
+	.password::placeholder {
+		color: rgba(0, 0, 0, 0.5);
+		font-family: 'Inter', sans-serif;
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+	.password,
+	.enter {
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 367px) {
+	.enter {
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 20px;
+		font-weight: 500;
+		padding: 8px;
+		background: none;
+		border: 1px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		cursor: pointer;
+	}
+
+	.login,
+	.password {
+		margin-top: 16px;
+		outline: none;
+		border: 1px solid #d9d9d9;
+		border-radius: 10px;
+		padding: 15px 15px;
+		color: rgba(0, 0, 0);
+		font-family: 'Inter', sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+		max-width: 200px;
+		transition: border 0.3s ease;
+	}
+
+	.login::placeholder,
+	.password::placeholder {
+		color: rgba(0, 0, 0, 0.5);
+		font-family: 'Inter', sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	.login,
+	.password,
+	.enter {
+		width: 170px;
+		outline: none;
+		margin: 0 auto;
+		border-radius: 10px;
+		border: 1px solid #d9d9d9;
+	}
+
+	.password,
+	.enter {
+		margin-top: 20px;
+	}
+}

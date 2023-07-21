@@ -1,0 +1,277 @@
+.container {
+	max-width: 900px;
+	margin: 70px auto;
+}
+
+.search {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+.searchOnCity {
+	width: 250px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.searchOnCityInput {
+	outline: none;
+	border: 2px solid #d9d9d9;
+	border-radius: 10px;
+	padding: 15px 15px;
+	color: rgba(0, 0, 0);
+	font-family: 'Inter', sans-serif;
+	font-size: 22px;
+	font-weight: 500;
+	max-width: 200px;
+	transition: border 0.3s ease;
+}
+
+.searchOnCityInput::placeholder {
+	color: rgba(0, 0, 0, 0.5);
+	font-family: 'Inter', sans-serif;
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.searchOnCityInput:focus {
+	border: 2px solid #000;
+}
+
+.searchOnCityDivButton {
+	margin-left: 20px;
+}
+
+.searchOnCityButton {
+	font-size: 34px;
+	color: #d9d9d9;
+	text-align: center;
+	padding: 11px;
+	cursor: pointer;
+	background: none;
+	border: 2px solid #d9d9d9;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+}
+
+.icon {
+	display: block;
+	margin: 0 auto;
+}
+
+.searchOnCityButton:hover {
+	color: #000;
+	border: 2px solid #000;
+}
+
+.addForm {
+	color: #000;
+	font-family: 'Inter', sans-serif;
+	font-size: 23px;
+	font-weight: 500;
+	padding: 14px;
+	background: none;
+	border: 2px solid #d9d9d9;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.addForm:hover {
+	border: 2px solid #000;
+}
+
+@media (max-width: 560px) {
+	.addForm {
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 19px;
+		font-weight: 500;
+		padding: 12px;
+		background: none;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.searchOnCityInput::placeholder {
+		color: rgba(0, 0, 0, 0.5);
+		font-family: 'Inter', sans-serif;
+		font-size: 19px;
+		font-weight: 500;
+	}
+
+	.searchOnCityInput {
+		outline: none;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+		padding: 10px;
+		color: rgba(0, 0, 0);
+		font-family: 'Inter', sans-serif;
+		font-size: 22px;
+		font-weight: 500;
+		max-width: 200px;
+		transition: border 0.3s ease;
+	}
+}
+
+@media (max-width: 525px) {
+	.addForm {
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 17px;
+		font-weight: 500;
+		padding: 10px;
+		background: none;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.searchOnCityInput::placeholder {
+		color: rgba(0, 0, 0, 0.5);
+		font-family: 'Inter', sans-serif;
+		font-size: 19px;
+		font-weight: 500;
+	}
+
+	.searchOnCityInput {
+		outline: none;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+		padding: 9px;
+		color: rgba(0, 0, 0);
+		font-family: 'Inter', sans-serif;
+		font-size: 22px;
+		font-weight: 500;
+		max-width: 200px;
+		transition: border 0.3s ease;
+	}
+}
+
+@media (max-width: 475px) {
+	.addForm {
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 17px;
+		font-weight: 500;
+		padding: 10px;
+		background: none;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.searchOnCityInput::placeholder {
+		color: rgba(0, 0, 0, 0.5);
+		font-family: 'Inter', sans-serif;
+		font-size: 17px;
+		font-weight: 500;
+	}
+
+	.searchOnCityInput {
+		outline: none;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+		padding: 9px;
+		color: rgba(0, 0, 0);
+		font-family: 'Inter', sans-serif;
+		font-size: 22px;
+		font-weight: 500;
+		max-width: 160px;
+		transition: border 0.3s ease;
+	}
+
+	.container {
+		max-width: 900px;
+		margin: 50px auto;
+	}
+}
+
+@media (max-width: 425px) {
+	.addForm {
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 15px;
+		font-weight: 500;
+		padding: 10px;
+		background: none;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.searchOnCityInput::placeholder {
+		color: rgba(0, 0, 0, 0.5);
+		font-family: 'Inter', sans-serif;
+		font-size: 15px;
+		font-weight: 500;
+	}
+
+	.searchOnCityInput {
+		outline: none;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+		padding: 9px;
+		color: rgba(0, 0, 0);
+		font-family: 'Inter', sans-serif;
+		font-size: 20px;
+		font-weight: 500;
+		max-width: 140px;
+		transition: border 0.3s ease;
+	}
+}
+
+@media (max-width: 397px) {
+	.addForm {
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 17px;
+		font-weight: 500;
+		padding: 10px;
+		background: none;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.search {
+		margin-top: -30px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+
+	.searchOnCity {
+		margin: 0 auto;
+		max-width: 170px;
+	}
+
+	.searchOnCityInput::placeholder {
+		color: rgba(0, 0, 0, 0.5);
+		font-family: 'Inter', sans-serif;
+		font-size: 15px;
+		font-weight: 500;
+	}
+
+	.searchOnCityInput {
+		margin-bottom: 20px;
+		outline: none;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+		padding: 8px;
+		color: rgba(0, 0, 0);
+		font-family: 'Inter', sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+		max-width: 150px;
+		transition: border 0.3s ease;
+	}
+}

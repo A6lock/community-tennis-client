@@ -1,0 +1,176 @@
+.container {
+	margin: 15px auto;
+	max-width: 900px;
+	height: fit-content;
+	display: flex;
+	justify-content: space-between;
+}
+
+.loginOrRegistration {
+	display: flex;
+	max-width: fit-content;
+	justify-content: space-between;
+}
+
+.login {
+	margin-right: 40px;
+}
+
+.login:last-child {
+	margin-right: 0;
+}
+
+.a {
+	color: #000;
+	text-decoration: none;
+	font-family: 'Inter', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	transition: color 0.2s ease;
+}
+
+.a:hover {
+	color: #d9d9d9;
+}
+
+.about {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	max-width: 900px;
+	height: fit-content;
+	border: 2px solid #d9d9d9;
+	border-radius: 10px;
+	margin: 70px auto;
+	text-align: left;
+}
+
+.nameField {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.nameField {
+	color: #000;
+	font-family: 'Inter', sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.valueField {
+	color: #000;
+	font-family: 'Inter', sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.edit {
+	margin-left: 50px;
+	color: #000;
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	padding: 14px;
+	background: none;
+	border: 2px solid #d9d9d9;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin-bottom: 30px;
+}
+
+.edit:hover {
+	border: 2px solid #000;
+}
+
+@media (max-width: 693px) {
+	.valueField {
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 22px;
+		font-weight: 500;
+	}
+
+	.nameField {
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 22px;
+		font-weight: 400;
+	}
+}
+
+@media (max-width: 580px) {
+	.about {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		max-width: 900px;
+		height: fit-content;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+		margin: 30px auto;
+		text-align: left;
+	}
+
+	.edit {
+		margin-left: 50px;
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+		padding: 14px;
+		background: none;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		margin-bottom: 30px;
+	}
+
+	.nameField {
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+	.valueField {
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+	}
+}
+
+@media (max-width: 500px) {
+	.a {
+		color: #000;
+		text-decoration: none;
+		font-family: 'Inter', sans-serif;
+		font-weight: 400;
+		font-size: 18px;
+		transition: color 0.2s ease;
+	}
+}
+
+@media (max-width: 383px) {
+	.a {
+		color: #000;
+		text-decoration: none;
+		font-family: 'Inter', sans-serif;
+		font-weight: 400;
+		font-size: 15px;
+		transition: color 0.2s ease;
+	}
+}
+
+@media (max-width: 350px) {
+	.a {
+		color: #000;
+		text-decoration: none;
+		font-family: 'Inter', sans-serif;
+		font-weight: 400;
+		font-size: 13px;
+		transition: color 0.2s ease;
+	}
+}

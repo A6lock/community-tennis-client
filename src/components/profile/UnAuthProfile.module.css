@@ -1,0 +1,157 @@
+.container {
+	max-width: 900px;
+	height: fit-content;
+	border: 2px solid #d9d9d9;
+	border-radius: 10px;
+	margin: 70px auto 0 auto;
+}
+
+.text {
+	color: #000;
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	margin: 40px 50px 0 50px;
+}
+
+.textA {
+	color: #000;
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	margin: 35px auto;
+}
+
+.choose {
+	max-width: 700px;
+	height: 100px;
+	margin: 30px auto 0 auto;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 40px;
+}
+
+.auth {
+	width: 300px;
+	height: 100%;
+	border: 1px solid #d9d9d9;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.reg {
+	width: 300px;
+	height: 100%;
+	border: 1px solid #d9d9d9;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.auth:hover {
+	border: 1px solid #000;
+}
+
+.reg:hover {
+	border: 1px solid #000;
+}
+
+@media (max-width: 800px) {
+	.auth {
+		width: 250px;
+		height: 100%;
+		border: 1px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.reg {
+		width: 250px;
+		height: 100%;
+		border: 1px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+}
+
+@media (max-width: 650px) {
+	.auth {
+		width: 200px;
+		height: 100%;
+		border: 1px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.reg {
+		width: 200px;
+		height: 100%;
+		border: 1px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+}
+
+@media (max-width: 530px) {
+	.auth {
+		width: 170px;
+		height: 100%;
+		border: 1px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.reg {
+		width: 170px;
+		height: 100%;
+		border: 1px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+}
+
+@media (max-width: 490px) {
+	.text {
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+		margin: 40px 30px -20px 30px;
+	}
+
+	.choose {
+		max-width: 700px;
+		height: 300px;
+		margin: 10px auto 10px auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.auth {
+		margin: 0 auto;
+		width: 170px;
+		height: 90px;
+		border: 1px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.reg {
+		margin: 0 auto;
+		width: 170px;
+		height: 90px;
+		border: 1px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+}

@@ -1,0 +1,100 @@
+.info {
+	margin-top: 15px;
+	display: flex;
+	flex-direction: column;
+	margin-right: 50px;
+	justify-content: space-around;
+}
+
+.valueField {
+	outline: none;
+	border: none;
+	border-bottom: 2px solid #d9d9d9;
+	color: #000;
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.edit {
+	margin-left: 50px;
+	width: 130px;
+	color: #000;
+	font-family: 'Inter', sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	padding: 14px;
+	background: none;
+	border: 2px solid #d9d9d9;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin-bottom: 17px;
+}
+
+.edit:hover {
+	border: 2px solid #000;
+}
+
+@media (max-width: 768px) {
+	.valueField {
+		outline: none;
+		border: none;
+		border-bottom: 2px solid #d9d9d9;
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 20px;
+		font-weight: 500;
+		width: 200px;
+	}
+}
+
+@media (max-width: 685px) {
+	.valueField {
+		outline: none;
+		border: none;
+		border-bottom: 2px solid #d9d9d9;
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 20px;
+		font-weight: 500;
+		width: 150px;
+	}
+}
+
+@media (max-width: 580px) {
+	.info {
+		margin-top: 15px;
+		display: flex;
+		flex-direction: column;
+		margin-left: 50px;
+		justify-content: space-around;
+	}
+
+	.valueField {
+		outline: none;
+		border: none;
+		border-bottom: 2px solid #d9d9d9;
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 20px;
+		font-weight: 500;
+		width: 100%;
+	}
+
+	.edit {
+		margin-top: 30px;
+		margin-left: 1px;
+		color: #000;
+		font-family: 'Inter', sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+		padding: 14px;
+		background: none;
+		border: 2px solid #d9d9d9;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		margin-bottom: 17px;
+	}
+}
