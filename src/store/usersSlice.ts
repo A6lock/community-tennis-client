@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 import { checkUser } from '../types/types'
 
-export const API_URL = 'localhost:5000'
+export const API_URL = '92.53.120.243:5000'
 
 const value = localStorage.getItem('user')
 
