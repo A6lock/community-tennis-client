@@ -1,13 +1,12 @@
 import { useState } from 'react'
-import { useAppDispatch, useAppSelector } from '../../hook'
+import { useAppDispatch } from '../../hook'
 import { registrationUser } from '../../store/usersSlice'
-import { User } from '../../types/types'
+import { UserReg } from '../../types/types'
 import '../search/motion.css'
 import styles from './registration.module.css'
 
 const Registration = () => {
 	const [warning, setWarning] = useState<boolean>(false)
-	const answer = useAppSelector(state => state.user.succesfull)
 	const [succesfull, setSuccesfull] = useState<boolean>(false)
 	const dispatch = useAppDispatch()
 	const [log, setLog] = useState<string>('')
@@ -27,7 +26,7 @@ const Registration = () => {
 		telegram: telegram,
 	}
 
-	async function send(user: User) {
+	async function send(user: UserReg) {
 		if (pass !== repass) {
 			setWarning(true)
 			return

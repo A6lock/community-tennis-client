@@ -1,35 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
-import { checkUser } from '../types/types'
+import { User, UserReg, UserState, checkUser } from '../types/types'
 
-export const API_URL = '92.53.120.243:5000'
+export const API_URL = 'localhost:5000'
 
 const value = localStorage.getItem('user')
-
-type User = {
-	_id: string
-	name: string
-	login: string
-	password: string
-	city: string
-	age: number
-	telegram: string
-}
-
-type newUser = {
-	name: string
-	login: string
-	password: string
-	city: string
-	age: number
-	telegram: string
-}
-
-type UserState = {
-	user: User[]
-	succesfull: boolean
-	updateUser: User[]
-}
 
 const initialState: UserState = {
 	user: typeof value === 'string' ? JSON.parse(value) : [],
@@ -70,7 +45,7 @@ export const updateUser = createAsyncThunk<
 	})
 
 	if (response.status > 200) {
-		return rejectWithValue('Serve error')
+		return rejectWithValue('Some error')
 	}
 
 	return response.data
@@ -78,7 +53,7 @@ export const updateUser = createAsyncThunk<
 
 export const registrationUser = createAsyncThunk<
 	User[],
-	newUser,
+	UserReg,
 	{ rejectValue: string }
 >('user/registrationUser', async function (user, { rejectWithValue }) {
 	const response = await axios.post(`http://${API_URL}/api/users`, {
@@ -91,7 +66,7 @@ export const registrationUser = createAsyncThunk<
 	})
 
 	if ((await response).status > 200) {
-		return rejectWithValue('Server error')
+		return rejectWithValue('Some error')
 	}
 
 	return response.data

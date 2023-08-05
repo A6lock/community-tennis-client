@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hook'
 import { updateUser } from '../../store/usersSlice'
-import { FullUser } from '../../types/types'
+import { User } from '../../types/types'
 import styles from './editProfile.module.css'
 
 const EditProfile = () => {
 	const dispatch = useAppDispatch()
-	async function fetchUpdateUser(user: FullUser) {
+	async function fetchUpdateUser(user: User) {
 		dispatch(updateUser(user))
 	}
 

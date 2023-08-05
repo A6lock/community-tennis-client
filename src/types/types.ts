@@ -12,19 +12,19 @@ export type listField = {
 }
 
 export type User = {
+	_id: string
+	name: string
 	login: string
 	password: string
-	name: string
 	city: string
 	age: number
 	telegram: string
 }
 
-export type FullUser = {
-	_id: string
-	name: string
+export type UserReg = {
 	login: string
 	password: string
+	name: string
 	city: string
 	age: number
 	telegram: string
@@ -47,4 +47,15 @@ export type Post = {
 	city: string
 	telegram: string
 	cort: string
+}
+
+export type PostsState = {
+	listPosts: Post[]
+	toggle: boolean
+}
+
+export type UserState = {
+	user: User[]
+	succesfull: boolean
+	updateUser: User[]
 }

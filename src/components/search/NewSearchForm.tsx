@@ -1,8 +1,6 @@
-import axios from 'axios'
 import { ChangeEvent, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hook'
-import { fetchPosts, toggleFlag } from '../../store/postsSlice'
-import { API_URL } from '../../store/usersSlice'
+import { addPosts, fetchPosts, toggleFlag } from '../../store/postsSlice'
 import { listField } from '../../types/types'
 import styles from './new-search-form.module.css'
 
@@ -47,26 +45,10 @@ const NewSearchForm = () => {
 			setWarning(true)
 			return
 		}
-
-		try {
-			axios.post(`http://${API_URL}/api/posts`, {
-				id: list.id,
-				date: list.date,
-				selfLevel: list.levelSelf,
-				payment: list.payment,
-				levelOpp: list.level,
-				sexOpp: list.sex,
-				name: list.name,
-				city: list.city,
-				telegram: list.telegram,
-				cort: list.cort,
-			})
-			setWarning(false)
-			dispatch(toggleFlag())
-			dispatch(fetchPosts())
-		} catch (e) {
-			console.log(e)
-		}
+		setWarning(false)
+		dispatch(addPosts(list))
+		dispatch(toggleFlag())
+		dispatch(fetchPosts())
 	}
 
 	const dateHanlder = (e: ChangeEvent<HTMLInputElement>): void => {

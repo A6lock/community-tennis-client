@@ -1,9 +1,7 @@
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { useAppDispatch, useAppSelector } from '../../hook'
 import { fetchPosts, toggleFlag } from '../../store/postsSlice'
-import { API_URL } from '../../store/usersSlice'
 import { Post } from '../../types/types'
 import NewSearchForm from './NewSearchForm'
 import SearchForm from './SearchForm'
@@ -12,6 +10,7 @@ import styles from './search.module.css'
 
 const PageSearch = () => {
 	const [list, setList] = useState<Post[]>()
+
 	const toggle = useAppSelector(state => state.posts.toggle)
 	const [newForm, setNewForm] = useState<boolean>(false)
 	const [city, setCity] = useState<string>('')
@@ -36,21 +35,10 @@ const PageSearch = () => {
 	const toggleHandler = () => {
 		dispatch(toggleFlag())
 	}
-	useEffect(() => {
-		async function fetchData() {
-			try {
-				const response = await axios.get(`http://${API_URL}/api/posts`)
-				setList(response.data)
-			} catch (e) {
-				console.log(e)
-			}
-		}
-		fetchData()
-	}, [toggle])
 
 	useEffect(() => {
 		dispatch(fetchPosts())
-	}, [dispatch])
+	}, [dispatch, toggle])
 
 	return (
 		<div className={styles.container}>
@@ -74,7 +62,7 @@ const PageSearch = () => {
 			</CSSTransition>
 
 			{city?.length < 1
-				? list?.map(post => (
+				? posts?.map(post => (
 						<SearchForm
 							key={post._id}
 							city={post.city}
@@ -90,7 +78,7 @@ const PageSearch = () => {
 							_id={post._id}
 						/>
 				  ))
-				: list
+				: posts
 						?.filter(post => post.city.includes(city))
 						.map(post => (
 							<SearchForm
