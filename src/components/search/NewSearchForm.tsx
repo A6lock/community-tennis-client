@@ -4,6 +4,8 @@ import { addPosts, fetchPosts, toggleFlag } from '../../store/postsSlice'
 import { listField } from '../../types/types'
 import styles from './new-search-form.module.css'
 
+// Очень большой компонент. Надо разделить логику компонента и отрисовку
+
 const NewSearchForm = () => {
 	const dispatch = useAppDispatch()
 	const [warning, setWarning] = useState<boolean>(false)

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import { useAppDispatch, useAppSelector } from '../../hook'
-import { exitUser } from '../../store/usersSlice'
-import styles from './profile.module.css'
+import { useAppDispatch, useAppSelector } from '../../../hook'
+import { exitUser } from '../../../store/usersSlice'
+import styles from '../profile.module.css'
 
 const ProfileMenu = () => {
 	const user = useAppSelector(state => state.user.user)

@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { useAppDispatch, useAppSelector } from '../../hook'
-import { updateUser } from '../../store/usersSlice'
-import { User } from '../../types/types'
+import { useAppDispatch, useAppSelector } from '../../../hook'
+import { updateUser } from '../../../store/usersSlice'
+import { User } from '../../../types/types'
 import styles from './editProfile.module.css'
 
 const EditProfile = () => {
@@ -30,6 +30,7 @@ const EditProfile = () => {
 	return (
 		<>
 			<div className={styles.info}>
+				{/* Тоже постоянно используются инпуты */}
 				<input
 					className={styles.valueField}
 					value={name}
@@ -55,6 +56,7 @@ const EditProfile = () => {
 					value={telegram}
 					onChange={e => setTelegram(e.target.value)}
 				/>
+				{/* Мб можно юзать переиспользуемый компонент кнопки? */}
 				<button
 					onClick={() => fetchUpdateUser(newUser)}
 					className={styles.edit}

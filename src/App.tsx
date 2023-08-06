@@ -9,6 +9,10 @@ import Registration from './components/registration/Registration'
 import PageSearch from './components/search/PageSearch'
 import store from './store'
 
+/*
+	У тебя Main PageSearch Login Registration Profile - отдельные страницы. Ты тянешь их из компонентов
+*/
+
 function App() {
 	return (
 		<Provider store={store}>

@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../hook'
 import { exitUser } from '../../store/usersSlice'
-import EditProfile from './EditProfile'
-import ProfileMenu from './ProfileMenu'
-import UnAuthProfile from './UnAuthProfile'
+// 
+import EditProfile from './editProfile/EditProfile'
+import ProfileMenu from './profileMenu/ProfileMenu'
+import UnAuthProfile from './unAuthProfile/UnAuthProfile'
 import styles from './profile.module.css'
 
 const Profile = () => {
@@ -11,11 +12,14 @@ const Profile = () => {
 	const user = useAppSelector(state => state.user.user)
 	const dispatch = useAppDispatch()
 
+	// Не используется
 	const exitUserHandler = () => {
 		dispatch(exitUser())
 	}
-
+	// Не используется
 	const changeDataHandler = () => {}
+
+	// Посмотри, что тут можно разбить на компоненты
 
 	return (
 		<>
@@ -45,7 +49,7 @@ const Profile = () => {
 								Telegram:{' '}
 								<span className={styles.valueField}>{user[0]?.telegram}</span>
 							</p>
-
+							
 							<button onClick={() => setEdit(!edit)} className={styles.edit}>
 								{edit ? 'отменить' : 'редактировать'}
 							</button>

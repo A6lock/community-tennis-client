@@ -1,77 +1,70 @@
-import { useState } from 'react'
-import { useAppDispatch } from '../../hook'
-import { registrationUser } from '../../store/usersSlice'
-import { UserReg } from '../../types/types'
-import '../search/motion.css'
+import { useRegistation } from './hooks/useRegistration';
+
 import styles from './registration.module.css'
 
+import '../search/motion.css'
+
 const Registration = () => {
-	const [warning, setWarning] = useState<boolean>(false)
-	const [succesfull, setSuccesfull] = useState<boolean>(false)
-	const dispatch = useAppDispatch()
-	const [log, setLog] = useState<string>('')
-	const [pass, setPass] = useState<string>('')
-	const [repass, setRepass] = useState<string>('')
-	const [name, setName] = useState<string>('')
-	const [city, setCity] = useState<string>('')
-	const [age, setAge] = useState<number>(0)
-	const [telegram, setTelegram] = useState<string>('')
 
-	const user = {
-		login: log,
-		password: pass,
-		name: name,
-		city: city,
-		age: age,
-		telegram: telegram,
-	}
+	/* 
+		можно написать кастомный хук useRegistration, чтобы изолировать логику и сделать компонент максимально 
+		тупеньким, чтобы он просто получал какие-то данные и рендерил. Везде пишут, что кастомные хуки используются
+		чтобы переиспользовать логику и не копипастить код, однако на практике часто прибегают к кастомным хукам, 
+		чтобы изолировать логику. Например мне надо что-то доработать в логике - я иду в кастомный хук. Надо поправить
+		то, что рендерится, тупо работаю с компонентом. Четкое разделение и нет большого колва-кода в компоненте сле-
+		довательно легче читать, масштабировать, поддерживать.
 
-	async function send(user: UserReg) {
-		if (pass !== repass) {
-			setWarning(true)
-			return
-		}
-		if (log.length <= 2) {
-			setWarning(true)
-			return
-		}
-		if (name.length <= 2) {
-			setWarning(true)
-			return
-		}
-		if (city.length < 2) {
-			setWarning(true)
-			return
-		}
-		if (age <= 5 || age >= 70) {
-			setWarning(true)
-			return
-		}
-		if (telegram.length <= 2) {
-			setWarning(true)
-			return
-		}
-		dispatch(registrationUser(user))
-		setLog('')
-		setPass('')
-		setRepass('')
-		setName('')
-		setCity('')
-		setTelegram('')
-		setSuccesfull(true)
-	}
+		Почитай про архитектуру фича слайс дизайн (Именно про построение структур папок). Это не мастхев, от нее можно отходить, но за основу взять стоит.
+	*/
+	const { succesfull, 
+			setLog, 
+			log, 
+			pass, 
+			setPass, 
+			repass, 
+			setRepass, 
+			telegram, 
+			setTelegram, 
+			warning, 
+			user,
+			name,
+			setName,
+			city,
+			setCity,
+			setAge,
+			send,  
+		} = useRegistation()
+
+	/*
+		Еще заметил, что у тебя повторятся импуты. Не думал сделать компонент Input или более узконаправленный
+		RegistrationInput,  в который  ты будешь передавать например
+		<RegistrationInput 
+			onChange
+			required
+			className
+			value
+			placeholder
+		/>
+
+		Возможно это избыточная хуйня, с которой не стоит заморачиваться, но все равно можно рассмотреть этот пожход 
+		для опыта)
+
+		Также, на работе, ты не будешь сам реализовывать логику форм, в плане валидации и тд. Чекни реактХукФорм
+		или формик. 100 проц столкнешься на работе
+	*/
 
 	return (
 		<>
-			{succesfull ? (
-				<>
-					<div className={styles.container}>
-						<div className={styles.wrapper}>
-							<p className={styles.succes}>Вы успешно зарегистрировались!</p>
+			{succesfull 
+				? (
+					<>
+						<div className={styles.container}>
+							<div className={styles.wrapper}>
+								<p className={styles.succes}>Вы успешно зарегистрировались!</p>
+							</div>
 						</div>
-					</div>
-				</>
-			) : (
+					</>
+				) : (
 				<>
 					<div className={styles.container}>
 						<div className={styles.wrapper}>

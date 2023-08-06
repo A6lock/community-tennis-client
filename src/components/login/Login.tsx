@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import { Navigate } from 'react-router-dom'
-import { useAppDispatch, useAppSelector } from '../../hook'
+
+import { useAppDispatch } from '../../hook'
 import { fetchUserByLogin } from '../../store/usersSlice'
 import { checkUser } from '../../types/types'
+
+
 import styles from './login.module.css'
 
 const Login = () => {
@@ -10,7 +13,6 @@ const Login = () => {
 	const [confirm, setConfirm] = useState<boolean>(false)
 	const [response, setResponse] = useState<number>(0)
 	const [password, setPassword] = useState<string>('')
-	const user = useAppSelector(state => state.user.user)
 	const check = {
 		login: login,
 		password: password,
@@ -37,6 +39,9 @@ const Login = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.wrapper}>
+				{/* Повторяются импуты. Надо делать компонент импута и переиспользовать. Подробнее в Registration
+				
+				*/}
 				<div className={styles.inputsLog}>
 					<input
 						onChange={e => loginHandler(e)}
@@ -55,6 +60,7 @@ const Login = () => {
 						placeholder='пароль'
 					/>
 				</div>
+				{/* Войти, зарегистрироваться и прочие кнопки тоже надо вынести в отдельный компонент */}
 				<button onClick={() => log(check)} className={styles.enter}>
 					войти
 				</button>
